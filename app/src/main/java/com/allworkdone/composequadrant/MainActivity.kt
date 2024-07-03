@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -60,38 +61,46 @@ fun ComposeQuadrantApp() {
         Row(Modifier.weight(1f)) {
             // First quadrant: Text composable
             ComposeQuadrant(
-                title = "Text composable",
-                description = "Displays text and follows the recommended Material Design guidelines.",
+                title = stringResource(R.string.text_composable_title),
+                description = stringResource(R.string.title_composable_description),
                 backgroundColor = Color(0xFFEADDFF),
                 // Modifier to fill half the row's width and handle click events
-                modifier = Modifier.weight(1f).clickable(onClick = {})
+                modifier = Modifier
+                    .weight(1f)
+                    .clickable(onClick = {})
             )
             // Second quadrant: Image composable
             ComposeQuadrant(
-                title = "Image composable",
-                description = "Creates a composable that lays out and draws a given Painter class object.",
+                title = stringResource(R.string.image_composable_title),
+                description = stringResource(R.string.image_composable_description),
                 backgroundColor = Color(0xFFD0BCFF),
                 // Modifier to fill half the row's width and handle click events
-                modifier = Modifier.weight(1f).clickable(onClick = {})
+                modifier = Modifier
+                    .weight(1f)
+                    .clickable(onClick = {})
             )
         }
         // Second row, taking up 1 unit of the available vertical space
         Row(Modifier.weight(1f)) {
             // Third quadrant: Row composable
             ComposeQuadrant(
-                title = "Row composable",
-                description = "A layout composable that places its children in a horizontal sequence.",
+                title = stringResource(R.string.row_composable_title),
+                description = stringResource(R.string.row_composable_description),
                 backgroundColor = Color(0xFFB69DF8),
                 // Modifier to fill half the row's width and handle click events
-                modifier = Modifier.weight(1f).clickable(onClick = {})
+                modifier = Modifier
+                    .weight(1f)
+                    .clickable(onClick = {})
             )
             // Fourth quadrant: Column composable
             ComposeQuadrant(
-                title = "Column composable",
-                description = "A layout composable that places its children in a vertical sequence.",
+                title = stringResource(R.string.column_composable_title),
+                description = stringResource(R.string.column_composable_description),
                 backgroundColor = Color(0xFFF6EDFF),
                 // Modifier to fill half the row's width and handle click events
-                modifier = Modifier.weight(1f).clickable(onClick = {})
+                modifier = Modifier
+                    .weight(1f)
+                    .clickable(onClick = {})
             )
         }
     }
